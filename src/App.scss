@@ -1,0 +1,12 @@
+$main-bg: #eaeaea;
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: $main-bg;
+}
+
+.main {
+  padding: 25px 20px 0;
+}

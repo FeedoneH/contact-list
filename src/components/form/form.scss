@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 90px auto;
+  max-width: 470px;
+
+  padding: 50px ;
+  background: white;
+  border-radius: 13px;
+  box-shadow: 0px 0px 35px 5px rgba(47, 66, 233, 0.37);
+}
+.form h2 {
+  font-size: 25px;
+  text-align: center;
+}
+.form input,
+.form textarea {
+  margin: 10px 0;
+  line-height: 15px;
+  padding: 8px 12px;
+  outline: none;
+  border: 1px solid rgb(207, 201, 201);
+
+ 
+}
+
+.input-row {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.checkbox {
+  margin: 8px 0 25px;
+}
