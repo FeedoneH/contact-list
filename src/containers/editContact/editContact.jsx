@@ -34,13 +34,14 @@ export const EditContact = ({
       [name]: value,
     }));
   };
-  function edit() {
+
+  const edit = () => {
     if (checkEquality()) {
       editContacts(fields);
       openNotification(notificationSuccess);
       history.goBack();
     } else openNotification(notificationError);
-  }
+  };
   const checkEquality = () => {
     if (JSON.stringify(contact) === JSON.stringify(fields)) {
       return false;

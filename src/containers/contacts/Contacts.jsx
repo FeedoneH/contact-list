@@ -37,7 +37,6 @@ export const Contacts = () => {
   return (
     <div>
       <Header />
-
       {contextHolder}
       <ContactList
         handleInfo={showInfoModal}

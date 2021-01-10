@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { radio, selectBox, textInput} from "../../utils/Inputs";
+import { radio, selectBox, textInput } from "../../utils/Inputs";
 import { Form } from "../../components/form/Form";
 import { ContactsContext } from "../../context/ContactsContext";
 import { v4 } from "uuid";
@@ -7,12 +7,12 @@ import { withRouter } from "react-router-dom";
 import { openNotification } from "../../utils/OpenNotification";
 
 const notification = {
-  type: 'success',
-  message: 'Contact Added!',
-  description: 'You added new contact successfully.',
+  type: "success",
+  message: "Contact Added!",
+  description: "You added new contact successfully.",
   duration: 1,
-}
-export const AddContact = withRouter(({history}) => {
+};
+export const AddContact = withRouter(({ history }) => {
   const { addContacts } = useContext(ContactsContext);
   const [fields, setFields] = useState({
     name: "",
@@ -35,18 +35,17 @@ export const AddContact = withRouter(({history}) => {
     }
     return true;
   };
-  function add() {
+  const add = () => {
     let newContact = {
       id: v4(),
       ...fields,
     };
     if (validation()) {
       addContacts(newContact);
-      openNotification(notification)
-      history.goBack()
+      openNotification(notification);
+      history.goBack();
     }
-  }
-
+  };
 
   const handleFieldsChange = (name, value) => {
     setFields((v) => ({
@@ -67,7 +66,6 @@ export const AddContact = withRouter(({history}) => {
           add();
         }}
       />
-     
     </div>
   );
 });

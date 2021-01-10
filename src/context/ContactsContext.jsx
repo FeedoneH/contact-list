@@ -36,7 +36,7 @@ const reducer = (state = initialState, { type, payload }) => {
     case ADD_CONTACT:
       return {
         ...state,
-        contacts: [payload,...state.contacts, ],
+        contacts: [payload, ...state.contacts],
       };
     case EDIT_CONTACT:
       return {
@@ -86,12 +86,13 @@ export const ContactsContextProvider = ({ children }) => {
     dispatch(editContactAction(payload));
   };
 
-
-  const deleteContacts=(payload)=> {
-    let updatedContacts = state.contacts.filter((contact) => contact.id!==payload);
+  const deleteContacts = (payload) => {
+    let updatedContacts = state.contacts.filter(
+      (contact) => contact.id !== payload
+    );
     localStorage.setItem("Contacts", JSON.stringify(updatedContacts));
-    dispatch(deleteContactAction(payload))
-  }
+    dispatch(deleteContactAction(payload));
+  };
   useEffect(() => {
     getContacts();
   }, []);
