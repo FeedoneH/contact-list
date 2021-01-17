@@ -1,8 +1,9 @@
 import React, { useContext, useState } from "react";
-import { Modal, Button, Space } from "antd";
+import { Modal } from "antd";
 import { ContactList } from "../../components/contactList/ContactList";
 import { Header } from "../../components/header/Header";
 import { ContactsContext } from "../../context/ContactsContext";
+import "./contacts.scss";
 
 export const Contacts = () => {
   const { contacts, deleteContacts } = useContext(ContactsContext);
@@ -34,8 +35,9 @@ export const Contacts = () => {
     };
     return modal.info(config);
   };
+
   return (
-    <div>
+    <div className="contacts">
       <Header />
       {contextHolder}
       <ContactList

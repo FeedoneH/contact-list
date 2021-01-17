@@ -1,0 +1,11 @@
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: rgb(49, 241, 49);
+  border-color: rgb(49, 241, 49);
+}
+.ant-checkbox-wrapper:hover .ant-checkbox-inner {
+  border-color: rgb(49, 241, 49);
+}
+
+.ant-checkbox-checked::after {
+  border-color: rgb(49, 241, 49) !important;
+}

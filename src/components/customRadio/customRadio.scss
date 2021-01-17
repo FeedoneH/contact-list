@@ -1,0 +1,18 @@
+.radio {
+  width: 200px;
+  display: flex;
+}
+.ant-radio-inner::after {
+  background-color: rgb(49, 241, 49);
+}
+
+.ant-radio:hover .ant-radio-inner,
+.ant-radio-input:focus + .ant-radio-inner {
+  border-color: rgb(49, 241, 49);
+}
+.ant-radio-checked .ant-radio-inner {
+    border-color: rgb(49, 241, 49);
+}
+.radio-input {
+    margin-top: 4px;
+}

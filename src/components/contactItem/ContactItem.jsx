@@ -1,12 +1,12 @@
-import { Button } from "antd";
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { edit, info, trash } from "../../assets/ICONS/ICONS";
+import { CustomButton } from "../customButton/CustomButton";
 import "./contactItem.scss";
 
 export const ContactItem = withRouter(
   ({ contact, history, onClickDelete, onClickInfo }) => {
-    let { name, surname, fatherName, profession, id } = contact;
+    let { name, surname, fatherName, profession, id, getUpdates } = contact;
     
     let style = {
       width: "25%",
@@ -22,7 +22,7 @@ export const ContactItem = withRouter(
           <p className="contact__profession">{profession} </p>
         </div>
         <div className="buttons row">
-          <Button
+          <CustomButton
           icon={info}
             type="primary"
             style={{...style, background: '#27dd27'}}
@@ -30,7 +30,7 @@ export const ContactItem = withRouter(
             onClick={() => onClickInfo(contact)}
           />
 
-          <Button
+          <CustomButton
             style={{...style, bacckground:" #4545f5"}}
             icon={edit}
             type="primary"
@@ -40,7 +40,7 @@ export const ContactItem = withRouter(
             }}
           />
 
-          <Button
+          <CustomButton
             type="primary"
             icon={trash}
             style={{...style, background:" #f54545"}}

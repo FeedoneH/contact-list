@@ -1,0 +1,9 @@
+.ant-select-selector {
+  box-shadow: none !important;
+  border-color: rgb(192, 191, 191) !important ;
+}
+
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+    border-color: rgb(49, 241, 49) !important;
+}
+

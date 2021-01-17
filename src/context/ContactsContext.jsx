@@ -3,6 +3,7 @@ import React, { createContext, useEffect, useReducer } from "react";
 import { getContactsFromLS } from "../utils/getContactsFromLS";
 
 export const ContactsContext = createContext();
+
 const initialState = {
   contacts: [],
 };
